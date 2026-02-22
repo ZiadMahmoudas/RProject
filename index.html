@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>كنوز مصر الخفية</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="ldr">
+  <div class="ldr-glyph">𓂀</div>
+  <div class="ldr-bar"></div>
+  <p style="font-size:.6rem;letter-spacing:.45em;color:var(--muted)">كنوز مصر الخفية</p>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- TOAST -->
+<div id="toast-wrap"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="logo" href="#" onclick="showPage('home');return false">
+    𓂀 كنوز مصر
+    <sub>HIDDEN GEMS OF EGYPT</sub>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home');return false" data-page="home">الرئيسية</a></li>
+    <li><a href="#" onclick="showPage('places');return false" data-page="places">الأماكن</a></li>
+    <li><a href="#" onclick="showPage('about');return false" data-page="about">عن المشروع</a></li>
+    <li><a href="#" onclick="showPage('contact');return false" data-page="contact">تواصل</a></li>
+  </ul>
+  <button class="nav-wish" onclick="showPage('wishlist')" style="border:none;font-family:'Cairo',sans-serif;cursor:none">
+    ♥ قائمتي <span id="wish-count">0</span>
+  </button>
+</nav>
+
+<!-- ============================================================
+     HOME PAGE
+============================================================ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-photo"></div>
+    <div id="particles"></div>
+    <div class="hero-rule"></div>
+    <div class="hero-content">
+      <p class="eyebrow">✦ دليل سياحي — الأماكن غير المشهورة ✦</p>
+      <h1 class="hero-title"><span class="g">كنوز</span> مصر<br>الخفية</h1>
+      <p class="hero-sub">اكتشف الوجه الآخر لمصر — الجواهر المخفية التي تنتظر من يكتشفها بعيداً عن مسارات السياحة التقليدية</p>
+      <a class="btn-gold" href="#" onclick="showPage('places');return false"><span>🏺 ابدأ الرحلة</span></a>
+    </div>
+    <div class="hero-scroll"><div class="scroll-ln"></div><span>اكتشف</span></div>
+  </section>
+
+  <div class="ticker-wrap"><div class="ticker">
+    <span>✦ مصر القديمة</span><span>✦ كنوز مخفية</span><span>✦ تاريخ عريق</span>
+    <span>✦ Hidden Egypt</span><span>✦ مغامرة حقيقية</span><span>✦ الصحراء البيضاء</span>
+    <span>✦ الأقصر الخفية</span><span>✦ واحات سيناء</span><span>✦ البحر الأحمر</span>
+    <span>✦ مصر القديمة</span><span>✦ كنوز مخفية</span><span>✦ تاريخ عريق</span>
+    <span>✦ Hidden Egypt</span><span>✦ مغامرة حقيقية</span><span>✦ الصحراء البيضاء</span>
+    <span>✦ الأقصر الخفية</span><span>✦ واحات سيناء</span><span>✦ البحر الأحمر</span>
+  </div></div>
+
+  <!-- FEATURED -->
+  <div style="background:var(--dark2);padding:5rem 0">
+    <div class="home-section" style="padding-top:0;padding-bottom:0">
+      <p class="sec-lbl rv">أبرز الأماكن</p>
+      <h2 class="sec-title rv rv1">كنوز <span style="color:var(--gold)">تستحق الاكتشاف</span></h2>
+    </div>
+    <div class="feat-grid rv" style="max-width:1280px;margin:2rem auto 0;padding:0 3rem">
+      <div class="feat-card" onclick="openArticle(0)">
+        <img class="feat-img" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=900&q=80" alt="الصحراء البيضاء">
+        <div class="feat-overlay"></div>
+        <div class="feat-body">
+          <div class="feat-tag">الوادي الجديد • صحراء</div>
+          <div class="feat-title">الصحراء البيضاء السحرية</div>
+          <div class="feat-desc">تشكيلات جيرية بيضاء كأنها كائنات من عالم آخر — أكثر المشاهد غرابة وجمالاً في مصر</div>
+          <a class="feat-link" href="#">اقرأ المزيد ←</a>
+        </div>
+      </div>
+      <div class="feat-card" onclick="openArticle(1)">
+        <img class="feat-img" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=600&q=75" alt="معبد فيلة">
+        <div class="feat-overlay"></div>
+        <div class="feat-body">
+          <div class="feat-tag">أسوان • أثري</div>
+          <div class="feat-title">معبد فيلة المنسي</div>
+          <div class="feat-desc">جزيرة المعابد الغارقة التي أنقذتها اليونسكو</div>
+          <a class="feat-link" href="#">اقرأ المزيد ←</a>
+        </div>
+      </div>
+      <div class="feat-card" onclick="openArticle(4)">
+        <img class="feat-img" src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&q=75" alt="سيناء">
+        <div class="feat-overlay"></div>
+        <div class="feat-body">
+          <div class="feat-tag">سيناء • طبيعة</div>
+          <div class="feat-title">وادي الملاك في سيناء</div>
+          <div class="feat-desc">واحة مخفية وسط الصحراء الصخرية لا يعرفها إلا أهل المنطقة</div>
+          <a class="feat-link" href="#">اقرأ المزيد ←</a>
+        </div>
+      </div>
+      <div class="feat-card" onclick="openArticle(7)">
+        <img class="feat-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&q=75" alt="البحر الأحمر">
+        <div class="feat-overlay"></div>
+        <div class="feat-body">
+          <div class="feat-tag">مرسى علم • غوص</div>
+          <div class="feat-title">خليج أبو دباب السري</div>
+          <div class="feat-desc">ملاذ الأطوط والدوغونج — محمية طبيعية لم يصلها التلوث</div>
+          <a class="feat-link" href="#">اقرأ المزيد ←</a>
+        </div>
+      </div>
+      <div class="feat-card" onclick="openArticle(3)">
+        <img class="feat-img" src="https://images.unsplash.com/photo-1600688640154-9619e002df30?w=600&q=75" alt="الفيوم">
+        <div class="feat-overlay"></div>
+        <div class="feat-body">
+          <div class="feat-tag">الفيوم • طبيعة</div>
+          <div class="feat-title">بحيرة قارون الزرقاء</div>
+          <div class="feat-desc">بحيرة مالحة طبيعية بمياه زرقاء لازوردية وسط صحراء الفيوم</div>
+          <a class="feat-link" href="#">اقرأ المزيد ←</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="home-section">
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-n" data-count="50">0</div><div class="stat-l">مكان مخفي موثق</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="27">0</div><div class="stat-l">محافظة مغطاة</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="7000">0</div><div class="stat-l">سنة من الحضارة</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="12">0</div><div class="stat-l">منطقة جغرافية</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-top">
+        <div class="ft-brand">
+          <div class="logo" style="font-size:1.6rem;text-decoration:none">𓂀 كنوز مصر</div>
+          <p>دليل سياحي إلكتروني متخصص في الكشف عن الأماكن المصرية غير المشهورة — صُنع بشغف لمسابقة مواقع الويب 2026</p>
+        </div>
+        <div class="ft-col">
+          <h4>التنقل</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('home');return false">الرئيسية</a></li>
+            <li><a href="#" onclick="showPage('places');return false">الأماكن</a></li>
+            <li><a href="#" onclick="showPage('about');return false">عن المشروع</a></li>
+            <li><a href="#" onclick="showPage('contact');return false">تواصل</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>المشروع</h4>
+          <ul>
+            <li><a href="#">مسابقة مواقع الويب</a></li>
+            <li><a href="#">الحلقة الإعدادية</a></li>
+            <li><a href="#">2025 / 2026</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>© 2026 كنوز مصر الخفية — جميع الحقوق محفوظة</p>
+        <div class="ft-tag">✦ مسابقة مواقع الويب 2026</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     PLACES PAGE
+============================================================ -->
+<div class="page" id="page-places">
+  <div class="places-hero">
+    <div class="places-hero-bg"></div>
+    <div class="places-hero-overlay"></div>
+    <div class="ph-content">
+      <p class="eyebrow" style="animation:none;opacity:1;transform:none">✦ استكشف مصر الحقيقية ✦</p>
+      <h1 class="ph-title">جميع الأماكن</h1>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-lbl">تصفية:</span>
+    <button class="flt-btn on" data-cat="all">الكل</button>
+    <button class="flt-btn" data-cat="صحراء">صحراء</button>
+    <button class="flt-btn" data-cat="أثري">أثري</button>
+    <button class="flt-btn" data-cat="طبيعة">طبيعة</button>
+    <button class="flt-btn" data-cat="غوص">غوص</button>
+    <button class="flt-btn" data-cat="تاريخي">تاريخي</button>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="ابحث عن مكان..." oninput="filterPlaces()">
+    </div>
+  </div>
+
+  <div class="places-container">
+    <div class="places-grid" id="places-grid"></div>
+    <div class="load-more-wrap">
+      <button class="btn-gold" id="load-more-btn" onclick="loadMore()" style="opacity:1;animation:none"><span>تحميل المزيد ↓</span></button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-bottom">
+        <p>© 2026 كنوز مصر الخفية</p>
+        <div class="ft-tag">✦ مسابقة مواقع الويب 2026</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     ARTICLE PAGE
+============================================================ -->
+<div class="page" id="page-article">
+  <div class="article-wrap">
+    <button class="article-back" onclick="showPage('places')">→ العودة للأماكن</button>
+    <div id="article-content"></div>
+  </div>
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-bottom">
+        <p>© 2026 كنوز مصر الخفية</p>
+        <div class="ft-tag">✦ مسابقة مواقع الويب 2026</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     WISHLIST PAGE
+============================================================ -->
+<div class="page" id="page-wishlist">
+  <div class="wish-hero">
+    <p class="sec-lbl" style="justify-content:center">قائمة الأماكن المحفوظة</p>
+    <h1 class="sec-title">قائمتي <span style="color:var(--gold)">المفضلة ♥</span></h1>
+    <p style="color:var(--muted);font-size:.9rem;font-weight:300;margin-top:.5rem">الأماكن التي تريد زيارتها</p>
+  </div>
+  <div id="wish-content"></div>
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-bottom">
+        <p>© 2026 كنوز مصر الخفية</p>
+        <div class="ft-tag">✦ مسابقة مواقع الويب 2026</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     ABOUT PAGE
+============================================================ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="about-hero-ov"></div>
+    <div class="about-hero-content">
+      <p class="sec-lbl rv">من نحن</p>
+      <h1 class="sec-title rv rv1">قصة مشروع<br><span style="color:var(--gold)">كنوز مصر</span></h1>
+      <p style="color:var(--muted);font-size:.95rem;line-height:2;font-weight:300;margin-top:1rem" class="rv rv2">
+        مشروع طلابي وُلد من شغف حقيقي بالتاريخ المصري، يهدف لإبراز الأماكن التي تستحق أكثر مما تأخذه من اهتمام
+      </p>
+    </div>
+  </div>
+
+  <div class="about-body">
+    <div class="about-photo rv">
+      <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80" alt="مصر القديمة">
+    </div>
+    <div>
+      <p class="sec-lbl rv">هدفنا</p>
+      <h2 class="sec-title rv rv1">لماذا <span style="color:var(--gold)">الأماكن الخفية؟</span></h2>
+      <div class="rv rv2">
+        <p style="color:var(--muted);font-size:.92rem;line-height:2;font-weight:300;margin-bottom:1.2rem">
+          مصر أكثر من مجرد الأهرامات وأبو الهول — هناك مدن مدفونة، ومعابد نسيها الزمن، وواحات تختبئ وسط الصحراء الشاسعة.
+        </p>
+        <p style="color:var(--muted);font-size:.92rem;line-height:2;font-weight:300;margin-bottom:1.2rem">
+          صُمِّم هذا الموقع خصيصاً كمشروع لمسابقة مواقع الويب للحلقة الإعدادية 2025/2026، ويهدف لتنمية الوعي بالتراث المصري عبر تكنولوجيا المعلومات والاتصالات.
+        </p>
+      </div>
+      <div class="about-vals rv rv3">
+        <div class="val-card">
+          <div class="val-icon">🏺</div>
+          <div class="val-title">التراث المصري</div>
+          <div class="val-text">توثيق وإبراز الأماكن التاريخية والأثرية غير المشهورة</div>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">🌿</div>
+          <div class="val-title">البيئة الطبيعية</div>
+          <div class="val-text">رصد المحميات والمناظر الطبيعية النادرة في ربوع مصر</div>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">💡</div>
+          <div class="val-title">التعليم الرقمي</div>
+          <div class="val-text">استخدام التقنية لنشر المعرفة بأسلوب تفاعلي وجذاب</div>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">🤝</div>
+          <div class="val-title">المجتمع المحلي</div>
+          <div class="val-text">دعم السياحة الداخلية والتعريف بالمجتمعات المحلية</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team / Credits -->
+  <div style="background:var(--dark2);padding:5rem 3rem">
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <p class="sec-lbl rv" style="justify-content:center">المشروع</p>
+      <h2 class="sec-title rv rv1" style="margin-bottom:3rem">تفاصيل <span style="color:var(--gold)">المشاركة</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:900px;margin:0 auto" class="rv rv2">
+        <div style="padding:2rem;border:1px solid var(--gold-dim);text-align:center">
+          <div style="font-family:'Amiri',serif;font-size:2.5rem;color:var(--gold);margin-bottom:.5rem">HTML5</div>
+          <div style="font-size:.75rem;color:var(--muted);font-weight:300">هيكل الموقع الدلالي</div>
+        </div>
+        <div style="padding:2rem;border:1px solid var(--gold-dim);text-align:center">
+          <div style="font-family:'Amiri',serif;font-size:2.5rem;color:var(--gold);margin-bottom:.5rem">CSS3</div>
+          <div style="font-size:.75rem;color:var(--muted);font-weight:300">التصميم والحركة الكاملة</div>
+        </div>
+        <div style="padding:2rem;border:1px solid var(--gold-dim);text-align:center">
+          <div style="font-family:'Amiri',serif;font-size:2.5rem;color:var(--gold);margin-bottom:.5rem">JS</div>
+          <div style="font-size:.75rem;color:var(--muted);font-weight:300">التفاعلية والـ Observer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-bottom">
+        <p>© 2026 كنوز مصر الخفية</p>
+        <div class="ft-tag">✦ مسابقة مواقع الويب 2026</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     CONTACT PAGE
+============================================================ -->
+<div class="page" id="page-contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <p class="sec-lbl rv">تواصل معنا</p>
+      <h1 class="sec-title rv rv1">نسعد<br><span style="color:var(--gold)">بسماعك</span></h1>
+      <p class="rv rv2">لديك سؤال أو اقتراح؟ هل تعرف مكاناً خفياً لم نغطيه؟ تواصل معنا وسنرد عليك في أقرب وقت.</p>
+      <div class="contact-info rv rv3">
+        <div class="ci"><div class="ci-icon">✉</div><span>knouzmaser@gmail.com</span></div>
+        <div class="ci"><div class="ci-icon">📍</div><span>مصر — الحلقة الإعدادية</span></div>
+        <div class="ci"><div class="ci-icon">🏆</div><span>مسابقة مواقع الويب 2025/2026</span></div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <p class="sec-lbl rv">أرسل رسالة</p>
+      <h2 style="font-family:'Amiri',serif;font-size:2rem;color:var(--sand);margin-bottom:2rem" class="rv rv1">اترك رسالتك هنا</h2>
+      <form id="contact-form" class="rv rv2">
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" name="from_name" placeholder="اسمك" required>
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" name="from_email" placeholder="بريدك الإلكتروني" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>موضوع الرسالة</label>
+          <select name="subject">
+            <option value="اقتراح مكان جديد">اقتراح مكان جديد</option>
+            <option value="تصحيح معلومة">تصحيح معلومة</option>
+            <option value="سؤال عام">سؤال عام</option>
+            <option value="تعاون">تعاون</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>الرسالة</label>
+          <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="send-btn">إرسال الرسالة ✦</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="js.js">
+
+</script>
+</body>
+</html>
