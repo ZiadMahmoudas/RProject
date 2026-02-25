@@ -35,7 +35,12 @@
     <li><a href="#" onclick="showPage('about');return false" data-page="about">عن المشروع</a></li>
     <li><a href="#" onclick="showPage('contact');return false" data-page="contact">تواصل</a></li>
   </ul>
-  <button class="nav-wish" onclick="showPage('wishlist')" style="border:none;font-family:'Cairo',sans-serif;cursor:none">
+  <button id="mobile-menu-btn" class="menu-toggle" aria-label="القائمة">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+  <button class="nav-wish" onclick="showPage('wishlist')">
     ♥ قائمتي <span id="wish-count">0</span>
   </button>
 </nav>
@@ -75,7 +80,7 @@
     </div>
     <div class="feat-grid rv" style="max-width:1280px;margin:2rem auto 0;padding:0 3rem">
       <div class="feat-card" onclick="openArticle(0)">
-        <img class="feat-img" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=900&q=80" alt="الصحراء البيضاء">
+        <img class="feat-img" src="images/p1.webp" alt="الصحراء البيضاء">
         <div class="feat-overlay"></div>
         <div class="feat-body">
           <div class="feat-tag">الوادي الجديد • صحراء</div>
@@ -85,7 +90,7 @@
         </div>
       </div>
       <div class="feat-card" onclick="openArticle(1)">
-        <img class="feat-img" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=600&q=75" alt="معبد فيلة">
+        <img class="feat-img" src="images/p2.webp" alt="معبد فيلة">
         <div class="feat-overlay"></div>
         <div class="feat-body">
           <div class="feat-tag">أسوان • أثري</div>
@@ -95,7 +100,7 @@
         </div>
       </div>
       <div class="feat-card" onclick="openArticle(4)">
-        <img class="feat-img" src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=600&q=75" alt="سيناء">
+        <img class="feat-img" src="images/p3.webp" alt="سيناء">
         <div class="feat-overlay"></div>
         <div class="feat-body">
           <div class="feat-tag">سيناء • طبيعة</div>
@@ -105,7 +110,7 @@
         </div>
       </div>
       <div class="feat-card" onclick="openArticle(7)">
-        <img class="feat-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&q=75" alt="البحر الأحمر">
+        <img class="feat-img" src="images/p4.webp" alt="البحر الأحمر">
         <div class="feat-overlay"></div>
         <div class="feat-body">
           <div class="feat-tag">مرسى علم • غوص</div>
@@ -115,7 +120,7 @@
         </div>
       </div>
       <div class="feat-card" onclick="openArticle(3)">
-        <img class="feat-img" src="https://images.unsplash.com/photo-1600688640154-9619e002df30?w=600&q=75" alt="الفيوم">
+        <img class="feat-img" src="images/egyptianmuseum.webp" alt="الفيوم">
         <div class="feat-overlay"></div>
         <div class="feat-body">
           <div class="feat-tag">الفيوم • طبيعة</div>
@@ -130,10 +135,10 @@
   <!-- STATS -->
   <div class="home-section">
     <div class="stats-row">
-      <div class="stat-box"><div class="stat-n" data-count="50">0</div><div class="stat-l">مكان مخفي موثق</div></div>
-      <div class="stat-box"><div class="stat-n" data-count="27">0</div><div class="stat-l">محافظة مغطاة</div></div>
-      <div class="stat-box"><div class="stat-n" data-count="7000">0</div><div class="stat-l">سنة من الحضارة</div></div>
-      <div class="stat-box"><div class="stat-n" data-count="12">0</div><div class="stat-l">منطقة جغرافية</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="500" data-suffix="+">0</div><div class="stat-l">مكان مخفي موثق</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="27" data-suffix="%">0</div><div class="stat-l">محافظة مغطاة</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="7000" data-suffix="+">0</div><div class="stat-l">سنة من الحضارة</div></div>
+      <div class="stat-box"><div class="stat-n" data-count="12" data-suffix="%">0</div><div class="stat-l">منطقة جغرافية</div></div>
     </div>
   </div>
 
